@@ -159,8 +159,10 @@ client.on('message', message => {
 						errors: ['time'],
 					})
 						.then((collected) => {
+							const delete_channel = client.channels.get('789223582432493628');
+							delete_channel.send('[' + message.createdAt.getHours() + ':' + message.createdAt.getMinutes() + ':' + message.createdAt.getSeconds() + ']' + ' ' + message.member.displayName + '(' + message.author.tag + ')' + ' adlı kişi ' + message.channel.name + ' destek talebini kapattı.')
 							message.channel.delete();
-						})
+													})
 						.catch(() => {
 							m.edit('Kapatma onayının süresi doldu. Desteği kapatmak için `-kapat` yazabilirsiniz!').then(m2 => {
 								//m2.delete();

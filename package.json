@@ -7,9 +7,9 @@
     "start": "node bot.js"
   },
   "dependencies": {
-    "discord.js": "11.6.4",
-    "request": "2.81.0",
+    "discord.js": "^11.6.4",
     "gamedig": "^1.0.37",
-    "pubg-api-redis": "^3.6.0"
+    "pubg-api-redis": "^3.6.0",
+    "request": "2.81.0"
   }
 }

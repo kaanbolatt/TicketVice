@@ -47,7 +47,7 @@ client.on('raw', async event => {
 client.on('message', message => {
 	
 	
-	if (message.channel.id == 707799287345709117)  { // ticket kanalı
+	if (message.channel.id == 760597285909823579)  { // ticket kanalı
 		//const isitBot = message.guild.roles.find(r => r.name === "🤖 Botlar");
 		if (message.member.roles.find(r => r.name === "Vice Ticket") || message.author.id == 496345281844215829 || message.author.id == 512686520684118019) {
 			//message.channel.send('Kaosu durdurdum')
@@ -74,10 +74,10 @@ client.on('message', message => {
 			return true;
 		}
 		//if (userData.ticketbans >= 1) return message.channel.reply(`Daha önceden yapılmış bir ihlal nedeniyle ticket açamıyorsunuz.`);
-		message.guild.createChannel(`🎫${message.author.username}`, { type: 'text', parent: '789185988873945169' }).then(c => {
+		message.guild.createChannel(`🎫${message.author.username}`, { type: 'text', parent: '789188425453535232' }).then(c => {
 			//c.setParent('707998986233184378');
 			c.setTopic(`${reason}`);
-			let role = message.guild.roles.find("name", "STAFF");
+			let role = message.guild.roles.find("name", "Staff");
 			let role2 = message.guild.roles.find("name", "@everyone");
 			let role3 = message.guild.roles.find("name", "Support");
 			let role4 = message.guild.roles.find("name", "Vice Öğretmeni");
@@ -138,17 +138,17 @@ client.on('message', message => {
 		return true;
 	}
 	// Vice Öğretmeni - Support - STAFF - log
-	if (message.member.roles.has('789196840217346069') || message.member.roles.has('789192397074595923') || message.member.roles.has('789192291193061446') && message.channel.name.startsWith(`🎫`)) {
+	if (message.member.roles.has('708142676108640298') || message.member.roles.has('618510564544741387') || message.member.roles.has('471271448040964097') && message.channel.name.startsWith(`🎫`)) {
 		if (message.content.toLowerCase().startsWith(`-yanitla`)) {
 			message.channel.send('Destek talebi <@' + message.author.id + '> tarafından yanıtlanıyor...');
 			message.delete(2000);
-			const log_channel = client.channels.get('789200495884501053');
+			const log_channel = client.channels.get('789216539387756544');
 			log_channel.send('[' + message.createdAt.getHours() + ':' + message.createdAt.getMinutes() + ':' + message.createdAt.getSeconds() + ']' + ' ' + message.member.displayName + '(' + message.author.tag + ')' + ' adlı kişi ' + message.channel.name + ' kanalındaki destek talebini yanıtladı.')
         }
 	}
 
 	// 1-> Staff 2-> Support
-	if (message.member.roles.has('789192291193061446') || message.member.roles.has('789192397074595923')) {
+	if (message.member.roles.has('471271448040964097') || message.member.roles.has('618510564544741387')) {
 		if (message.content.toLowerCase().startsWith(`-kapat`) || message.content.toLowerCase().startsWith(`-close`)) {
 			if (!message.channel.name.startsWith(`🎫`)) return message.channel.send(`Ticket kanalı dışında bu komutu kullanamazsın.`);
 			message.channel.send('Destek hattını kapatmak istediğinizden eminseniz `-onayla` yazın. Bu kanaldaki bilgiler yok olacak!')

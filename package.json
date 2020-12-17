@@ -1,0 +1,15 @@
+{
+  "name": "PROJECTS",
+  "description": "A discord bot for PROJECTS GG",
+  "version": "1.0.0",
+  "main": "bot.js",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "discord.js": "11.6.4",
+    "request": "2.81.0",
+    "gamedig": "^1.0.37",
+    "pubg-api-redis": "^3.6.0"
+  }
+}

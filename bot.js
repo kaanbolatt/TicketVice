@@ -31,7 +31,7 @@ const events = {
 	MESSAGE_REACTION_REMOVE: 'messageReactionRemove',
 };
 
-client.on('raw', async event => {
+/*client.on('raw', async event => {
 	if (!events.hasOwnProperty(event.t)) return;
 	const { d: data } = event;
 	const user = client.users.get(data.user_id);
@@ -42,7 +42,7 @@ client.on('raw', async event => {
 	const emojiKey = (data.emoji.id) ? `${data.emoji.name}:${data.emoji.id}` : data.emoji.name;
 	//const reaction = collected.first();
 	const reaction = message.reactions.get(emojiKey);
-});
+}); */
 
 client.on('message', message => {
 	
@@ -120,7 +120,7 @@ client.on('message', message => {
 				},*/
 				title: `Ticket oluşturuldu! (@${message.author.username})`,
 				url: "https://www.vice-rp.com/forum",
-				description: "Destek hattı başarıyla oluşturuldu!\nBu kanalda sorununuzla ilgili bilgi veriniz.\nYetkilileri etiketlemeyin, müsait olunca ticket cevaplanılır.\nSorununuz çözüldüğü zaman `-kapat` yazarak odayı kapatınız.\n\n**Sorun: " + message.content + "**\n",
+				description: "Destek hattı başarıyla oluşturuldu!\nBu kanalda sorununuzla ilgili bilgi veriniz.\nYetkilileri etiketlemeyin, müsait olunca ticket cevaplanılır.\n\n**Sorun: " + message.content + "**\n",
 				timestamp: new Date(),
 				footer: {
 					icon_url: client.user.avatarURL,

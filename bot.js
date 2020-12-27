@@ -147,8 +147,8 @@ client.on('message', message => {
         }
 	}
 
-	// 1-> Staff 2-> Support
-	if (message.member.roles.has('471271448040964097') || message.member.roles.has('618510564544741387')) {
+	// 1-> Staff 2-> Support 3-> Rol Destek Ekibi
+	if (message.member.roles.has('471271448040964097') || message.member.roles.has('618510564544741387') || message.member.roles.has('708142676108640298')) {
 		if (message.content.toLowerCase().startsWith(`-kapat`) || message.content.toLowerCase().startsWith(`-close`)) {
 			if (!message.channel.name.startsWith(`🎫`)) return message.channel.send(`Ticket kanalı dışında bu komutu kullanamazsın.`);
 			message.channel.send('Destek hattını kapatmak istediğinizden eminseniz `-onayla` yazın. Bu kanaldaki bilgiler yok olacak!')

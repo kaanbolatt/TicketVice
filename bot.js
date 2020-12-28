@@ -151,7 +151,7 @@ client.on('message', message => {
 	if (message.member.roles.has('471271448040964097') || message.member.roles.has('618510564544741387') || message.member.roles.has('708142676108640298')) {
 		if (message.content.toLowerCase().startsWith(`-kapat`) || message.content.toLowerCase().startsWith(`-close`)) {
 			if (!message.channel.name.startsWith(`🎫`)) return message.channel.send(`Ticket kanalı dışında bu komutu kullanamazsın.`);
-			message.channel.send('Destek hattını kapatmak istediğinizden eminseniz `-onayla` yazın. Bu kanaldaki bilgiler yok olacak!')
+			message.channel.send('-kapat yazdıktan sonra kanala herhangi biri, hehangi bir mesaj göndermesi durumunda kanal kendini kapatacaktır.')
 				.then((m) => {
 					message.channel.awaitMessages(response => response.content === '-onayla', {
 						max: 1,
